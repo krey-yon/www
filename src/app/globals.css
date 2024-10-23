@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: black;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+::view-transition-new(root) {
+  mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 128 128"><path d="M35.9187 91.56573a68.99886 68.99886 0 0 1-10.84961-3.62158l-.01593-.00568c.2832 4.51459 2.37653 9.82031 9.19885 13.91888a1.01047 1.01047 0 0 0 1.13617-.07367.99974.99974 0 0 0 .33252-1.08942 18.59123 18.59123 0 0 1 .19733-9.12592zM127.58 30.21a1.64423 1.64423 0 0 0-2.25.02 8.1764 8.1764 0 0 1-1.85 1.07 7.97416 7.97416 0 0 1-2.83.57 23.94259 23.94259 0 0 0-3.6.22 14.0561 14.0561 0 0 0-4.16 1.82c-.04.03-.25.17-.5.34a6.63241 6.63241 0 0 0-1.17-1.69 8.33736 8.33736 0 0 0-3.96-2.16 12.47924 12.47924 0 0 0-1.93-.28 5.09364 5.09364 0 0 1-2.63-.68 10.94036 10.94036 0 0 1-2.45-2.58A1.75819 1.75819 0 0 0 98.82 26a1.5424 1.5424 0 0 0-1.47 1.42c-1.92 9.4 6.94 13.94 9.95 15.19-1.45 3.95-4 8.91-8.29 11.81a28.91753 28.91753 0 0 1-16.29 4.83 38.43393 38.43393 0 0 1-22.04-7.3c-3.58229-2.56164-6.57914-5.83738-10.13-8.44A56.48173 56.48173 0 0 0 18.199 32.89264c-2.00367-.034-4.01022.03951-6.009.17736C2.06 33.54 1.17 34.28.96 35.36c-2 10.25-1.4 26.11 6.85 37.05 7.41 9.84 19.55 16.14 36.08 18.73 1.84.29 3.7.51 5.6.65-.45-.7-.86-1.41-1.24-2.12-1.36-.13-2.72-.29-4.05-.5-16-2.51-27.71-8.55-34.8-17.96C1.87 61.22 1.07 46.84 2.71 36.98c10.12 4.94 14.78 12.19 19.71 19.86.67 1.04 1.34 2.09 2.03 3.14 4.2 6.36 10.9 14 20.65 18.78a17.07942 17.07942 0 0 1-.1-1.8.96045.96045 0 0 1 1.02-.98A.99664.99664 0 0 1 47 77c0 .34.04 13.5 11.2 20.67a28.57454 28.57454 0 0 0 10.97 3.99c.94.15 3.82 1.13 3.82-.68a1.23319 1.23319 0 0 0-.3-.7c-.14-.16-.29-.32-.42-.46l-.03005-.03005c-2.24114-2.2412-3.5418-5.79006-4.59995-8.7a26.90625 26.90625 0 0 1-1.09-4.28 37.62108 37.62108 0 0 1-.46-9.71 1.00319 1.00319 0 0 1 2 .16 37.15662 37.15662 0 0 0 .01 6.07 71.53319 71.53319 0 0 0 24.5-6.2A53.86889 53.86889 0 0 1 68.97 88.5a.03674.03674 0 0 1-.03.01c.17.68.36 1.32.56 1.93a.03674.03674 0 0 0 .03-.01c16-3.48 36.44-14.23 43.51-45.65 1.03-.19 3.37-.58 3.37-.58 9.79-1.81 11.36-9.43 11.58-12.61A1.75706 1.75706 0 0 0 127.58 30.21zM30 51a2 2 0 1 1 2-2A2.00588 2.00588 0 0 1 30 51z"/><path d="M15.05519,68.3086a1.00013,1.00013,0,0,0-1.7476.9731,16.95459,16.95459,0,0,0,8.3692,6.8565,1.01046,1.01046,0,0,0,1.292-.5772.99971.99971,0,0,0-.5777-1.291A15.19755,15.19755,0,0,1,15.05519,68.3086Z"/></svg>')
+    center / 0 no-repeat;
+  animation: scale 2s;
+}
+
+::view-transition-old(root),
+.dark::view-transition-old(root) {
+  animation: none;
+  z-index: -1;
+}
+.dark::view-transition-new(root) {
+  animation: scale 2s;
+}
+
+@keyframes scale {
+  to {
+    mask-size: 1000vmax;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #eeeeee;
+  border-radius: 1px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: white;
+  width: 12px;
+}
+
+.signature__base {
+  stroke-dasharray: 8000;
+  animation: writeBase 4s infinite linear;
+}
+
+@keyframes writeBase {
+  0% {
+    stroke-dashoffset: 8000;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.signature__dash {
+  stroke-dasharray: 1000;
+  animation: writeDash 4s infinite linear;
+}
+
+@keyframes writeDash {
+  0%,
+  80% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+::selection {
+  color: white;
+  background: rgb(14, 14, 14);
+}
+.dark::selection {
+  color: black;
+  background: whitesmoke;
+}
+.bento {
+  @apply transform-gpu flex-col gap-2 overflow-hidden rounded-xl bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset];
+}
+.githubStats {
+  @apply w-[60%] flex-1 transform-gpu flex-col gap-2 overflow-hidden bg-white text-sm [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05),0_-20px_30px_-25px_#E8FFDB_inset] dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.2)] dark:[box-shadow:0_-20px_25px_-25px_#4b523d_inset];
+}
+.group-social:hover .social {
+  transform: translateX(0) !important;
+}
+.wavvy {
+  text-decoration: underline wavy #4e4b4b;
+}
+.quote {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+.polaroid:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+.polaroid {
+  position: relative;
+  transition:
+    transform 0.2s ease,
+    filter 0.3s ease;
+}
+.custom-scroll {
+  overflow: auto;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scroll {
+  scrollbar-width: none;
+}
+
+.custom-scroll {
+  -ms-overflow-style: none;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spinSlow {
+  animation: spin 5s linear infinite;
+}
