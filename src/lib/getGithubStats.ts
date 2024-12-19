@@ -81,19 +81,19 @@ const fetchGitHubData = async (): Promise<GitHubData> => {
     throw new Error('Failed to fetch GitHub data')
   }
 
-  let totalPRs = data.data.user.pullRequests.totalCount
-  let totalIssues = data.data.user.issues.totalCount
+  let totalPRs = data.data?.user?.pullRequests.totalCount
+  let totalIssues = data.data?.user?.issues.totalCount
   let totalStars = 0
 
-  data.data.user.repositories.nodes.forEach((repo: RepositoryNode) => {
+  data.data?.user?.repositories.nodes.forEach((repo: RepositoryNode) => {
     totalPRs += repo.pullRequests.totalCount
     totalIssues += repo.issues.totalCount
     totalStars += repo.stargazers.totalCount
   })
 
   return {
-    followers: data.data.user.followers.totalCount,
-    following: data.data.user.following.totalCount,
+    followers: data.data?.user?.followers.totalCount,
+    following: data.data?.user?.following.totalCount,
     totalStars,
     totalPRs,
     totalIssues,
