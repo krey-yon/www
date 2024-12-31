@@ -52,7 +52,6 @@ export default function RootLayout({ children }: ChildrenProps) {
     <html lang="en" suppressHydrationWarning>
       <Head>
         <script
-          async
           defer
           src="https://cloud.umami.is/script.js"
           data-website-id="1db85f7c-544a-46fb-8a0a-ef33a39fd61e"
