@@ -8,7 +8,7 @@ import HamburgerMenu from '../shared/HamburgerMenu'
 
 const navItems = [
   { name: 'Projects', href: '/projects' },
-  { name: 'Blog', href: 'https://blog.kreyon.tech/' },
+  { name: 'Blog', href: 'https://blog.kreyon.in' },
   { name: 'About', href: '/about' },
 ]
 

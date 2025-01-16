@@ -14,7 +14,7 @@ const info = {
   twitter: '@krey_yon',
   description:
     'Full-Stack Developer, Next.js, Always Learning. Crafting web apps.',
-  url: 'https://kreyon.tech',
+  url: 'https://kreyon.in',
   image: './public/images/avatarcircular.png',
 }
 
