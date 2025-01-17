@@ -4,14 +4,11 @@ import Script from 'next/script'
 const Analytics = () => {
   return (
     <>
-      {process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID &&
-        process.env.NEXT_PUBLIC_UMAMI_URL && (
-          <Script
-            async
-            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
-            src={`${process.env.NEXT_PUBLIC_UMAMI_URL}/script.js`}
-          />
-        )}
+      <Script
+        defer
+        data-website-id="1db85f7c-544a-46fb-8a0a-ef33a39fd61e"
+        src="https://cloud.umami.is/script.js"
+      />
     </>
   )
 }
