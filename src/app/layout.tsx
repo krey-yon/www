@@ -6,6 +6,7 @@ import React from 'react'
 import { Providers } from './Providers'
 import { cath, lombok, neu } from '@/lib/font'
 import Head from 'next/head'
+import Analytics from '@/components/layouts/Analytics'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -65,6 +66,7 @@ export default function RootLayout({ children }: ChildrenProps) {
           <Toaster />
         </Providers>
       </body>
+      <Analytics />
     </html>
   )
 }
